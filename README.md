@@ -69,7 +69,7 @@ msf5 > irb
 #### Native Linux Tools
 From https://github.com/billchaison/VNCDecrypt via https://miloserdov.org/?p=4854#65
 ```BASH
-echo -n d7a514d8c556aade | xxd -r -p | openssl enc -des-cbc --nopad --nosalt -K e84ad660c4721ae0 -iv 0000000000000000 -d | hexdump -Cv
+echo -n d7a514d8c556aade | xxd -r -p | openssl enc -provider legacy -provider default -des-cbc --nopad --nosalt -K e84ad660c4721ae0 -iv 0000000000000000 -d | hexdump -Cv
 ```
 Outputs
 ```BASH
